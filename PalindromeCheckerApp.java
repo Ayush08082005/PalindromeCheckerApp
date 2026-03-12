@@ -2,18 +2,14 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String input = "madam";
-        boolean isPalindrome = true;
+        String appName = "Palindrome Checker App";
+        String version = "Version 1.0";
 
-        for (int i = 0; i < input.length()/2; i++) {
-
-            if (input.charAt(i) != input.charAt(input.length()-1-i)) {
-                isPalindrome = false;
-                break;
-            }
-        }
-
-        System.out.println("Input : " + input);
-        System.out.println("Is Palindrome? : " + isPalindrome);
+        System.out.println("=================================");
+        System.out.println("Welcome to " + appName);
+        System.out.println("=================================");
+        System.out.println("Application Name : " + appName);
+        System.out.println("Version : " + version);
+        System.out.println("System initialized successfully.");
     }
 }
