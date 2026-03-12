@@ -1,23 +1,25 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String word = "madam";
-        Stack<Character> stack = new Stack<>();
+        String word = "level";
+        Queue<Character> queue = new LinkedList<>();
 
         for(char c : word.toCharArray()){
-            stack.push(c);
+            queue.add(c);
         }
 
-        String reversed = "";
-
-        while(!stack.isEmpty()){
-            reversed += stack.pop();
+        String forward = "";
+        while(!queue.isEmpty()){
+            forward += queue.remove();
         }
 
-        if(word.equals(reversed)){
+        String reverse = new StringBuilder(forward).reverse().toString();
+
+        if(forward.equals(reverse)){
             System.out.println("Palindrome");
         }else{
             System.out.println("Not Palindrome");
