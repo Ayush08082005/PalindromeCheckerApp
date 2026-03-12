@@ -2,11 +2,13 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String word = "Madam";
+        String text = "nurses run";
 
-        String reversed = new StringBuilder(word).reverse().toString();
+        text = text.replaceAll(" ", "");
 
-        if(word.equalsIgnoreCase(reversed)){
+        String reversed = new StringBuilder(text).reverse().toString();
+
+        if(text.equalsIgnoreCase(reversed)){
             System.out.println("Palindrome");
         }else{
             System.out.println("Not Palindrome");
