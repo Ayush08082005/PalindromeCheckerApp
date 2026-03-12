@@ -1,14 +1,17 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String text = "nurses run";
+        Scanner sc = new Scanner(System.in);
 
-        text = text.replaceAll(" ", "");
+        System.out.println("Enter word:");
+        String word = sc.nextLine();
 
-        String reversed = new StringBuilder(text).reverse().toString();
+        String reversed = new StringBuilder(word).reverse().toString();
 
-        if(text.equalsIgnoreCase(reversed)){
+        if(word.equalsIgnoreCase(reversed)){
             System.out.println("Palindrome");
         }else{
             System.out.println("Not Palindrome");
