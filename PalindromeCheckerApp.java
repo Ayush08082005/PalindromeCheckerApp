@@ -1,18 +1,27 @@
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
+
+    static boolean isPalindrome(String word){
+
+        String cleaned = word.replaceAll(" ", "").toLowerCase();
+
+        String reversed = new StringBuilder(cleaned).reverse().toString();
+
+        return cleaned.equals(reversed);
+    }
 
     public static void main(String[] args) {
 
-        String[] words = {"madam","hello","level","java"};
+        Scanner sc = new Scanner(System.in);
 
-        for(String word : words){
+        System.out.println("Enter text:");
+        String input = sc.nextLine();
 
-            String reversed = new StringBuilder(word).reverse().toString();
-
-            if(word.equals(reversed)){
-                System.out.println(word + " is Palindrome");
-            }else{
-                System.out.println(word + " is Not Palindrome");
-            }
+        if(isPalindrome(input)){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
         }
     }
 }
